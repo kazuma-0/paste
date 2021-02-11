@@ -2,13 +2,7 @@ import 'dart:io';
 //import 'package:args/args.dart';
 import 'package:http/http.dart' as http;
 void main(List<String> arguments) {
-  // print(arguments[0]);
-  // var arg = ArgParser()
-  // ..addFlag('help',abbr: 'h');
-  // var argResults = arg.parse(arguments);
-  // print(argResults['help']);
-  readfile(arguments[0]);
-  
+  arguments.isNotEmpty ? readfile(arguments[0]):print('usage: paste filename');
 }
 void readfile(String fileName){
   var newfile = File(fileName);
